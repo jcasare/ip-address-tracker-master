@@ -26,9 +26,39 @@ https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipInput}
 `);
     const lat = geoData.location.lat;
     const lng = geoData.location.lng;
+    const ipData = geoData.ip;
+    const ipLocation = geoData.location.city;
+    const ipTimezone = geoData.location.timezone;
+    const ipIsp = geoData.isp;
     console.log(geoData);
+
+    const markerIcon = L.icon({
+      iconUrl: "./images/icon-location.svg",
+      iconSize: [38, 38],
+      iconAnchor: [19, 38],
+      popupAnchor: [0, -38],
+    });
+    const marker = L.marker([lat, lng], { icon: markerIcon }).addTo(mymap);
     mymap.setView([lat, lng]);
-    const marker = L.marker([lat, lng]).addTo(mymap);
+
+    ipInfoDOM.innerHTML = `
+      <div class ="ip-address info-item">
+        <h4>IP ADDRESS</h4>
+        <p>${ipData}</p>
+      </div>
+      <div class = "ip-location info-item">
+        <h4>LOCATION</h4>
+        <p>${ipLocation}</p>
+      </div>
+      <div class = "ip-timezone info-item">
+        <h4>TIMEZONE</h4>
+        <p>${ipTimezone}</p>
+      </div>
+      <div class = "ip-isp info-item">
+        <h4>ISP</h4>
+        <p>${ipIsp}</p>
+      </div>
+    `;
   } catch (error) {
     console.log(error);
   }
