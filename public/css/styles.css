@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+}
+:root{
+     --Very-Dark-Gray: hsl(0, 0%, 17%);
+     --Dark-Gray: hsl(0, 0%, 59%);
+}
+.overall-wrapper{
+    max-width: 720px;
+    font-family: 'Rubik', sans-serif;
+}
+.header{
+    background: url(../images/pattern-bg.png);
+    text-align: center;
+    color: white;
+}
+#map{
+    height: 180px;
+}
