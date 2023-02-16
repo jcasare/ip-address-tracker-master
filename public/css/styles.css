@@ -40,8 +40,24 @@ body{
     margin-top: 1.5rem;
 }
 .query{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
 }
+.query input{
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 15px;
+    height: 100%;
+    width: 16rem;
+}
+.query button{
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    padding: 15px;
+}
+
 .ip-info{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -77,4 +93,5 @@ body{
 }
 button{
     cursor: pointer;
+    background-color: black;
 }
