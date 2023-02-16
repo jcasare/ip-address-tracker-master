@@ -20,5 +20,8 @@ body{
     color: white;
 }
 #map{
-    height: 180px;
+    height: 480px;
+}
+button{
+    cursor: pointer;
 }
