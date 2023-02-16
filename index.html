@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
  
 </head>
 <body>
@@ -18,18 +20,20 @@
         <h1>IP Address Tracker</h1>
         <div class="query">
           <input type="text" placeholder="Search for any IP address or domain">
-          <button type="submit"><img src="./images/icon-arrow.svg"></button>
+          <button type="submit" class="submit-btn"><img src="./images/icon-arrow.svg"></button>
         </div>
       </div>
       <div class="ip-info"></div>
-      <div class="map-wrapper"></div>
+      <div id="map" class="map-wrapper"></div>
     </div>
   </main>
   
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+      
+  <script src="./script/index.js"></script>
 </body>
 </html>
