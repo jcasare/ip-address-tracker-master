@@ -59,21 +59,28 @@ body{
 }
 
 .ip-info{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     border-radius: 15px;
     width: 80%;
     position: absolute;
-    top: 25%;
+    top: 20%;
     background-color: white;
     z-index: 1;
     gap: 1.9rem;
     padding: 1rem;
+    height: 15%;
+    align-items: center;
+
+    
 }
 .info-item{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    position: relative;
+    max-width: 100%;
 }
 .info-item h4{
     color: var(--Dark-Gray);
@@ -94,4 +101,31 @@ body{
 button{
     cursor: pointer;
     background-color: black;
+}
+
+@media only screen and (max-width:650px) {
+    .ip-info{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 18%;
+        min-height: 40%;
+        align-items: inherit;
+        flex-grow: inherit;
+        flex-wrap: wrap;
+        max-width: 55%;
+    }
+    .info-item{
+        flex-basis: calc(5% - 20px);
+    }
+    
+    @media only screen and (max-width:365px) {
+        .ip-info{
+            gap: 0.4rem;
+            top: 20%;
+        }
+        .info-item p{
+            font-size: small;
+        }
+    }
 }
