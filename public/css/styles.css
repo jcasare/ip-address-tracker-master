@@ -71,10 +71,9 @@ body{
     gap: 1.9rem;
     padding: 1rem;
     height: 15%;
-    align-items: center;
-
-    
+    align-items: center;    
 }
+
 .info-item{
     display: flex;
     flex-direction: column;
@@ -82,6 +81,16 @@ body{
     position: relative;
     max-width: 100%;
 }
+
+.info-item::before{
+    content: '';
+    position: relative;
+    width: 1px;
+    background-color: black;
+    height: 100%;
+    right: -20%;
+}
+
 .info-item h4{
     color: var(--Dark-Gray);
     font-weight: 500;
@@ -109,16 +118,17 @@ button{
         flex-direction: column;
         text-align: center;
         top: 18%;
-        min-height: 40%;
-        align-items: inherit;
-        flex-grow: inherit;
-        flex-wrap: wrap;
-        max-width: 55%;
+        width: 55%;
+        min-height: 35%;
+        gap: 1rem;
+        justify-content:space-around;
     }
     .info-item{
-        flex-basis: calc(5% - 20px);
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        flex-grow: inherit;
     }
-    
     @media only screen and (max-width:365px) {
         .ip-info{
             gap: 0.4rem;

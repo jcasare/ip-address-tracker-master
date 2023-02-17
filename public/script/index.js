@@ -45,7 +45,7 @@ https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipInput}
       <div class ="ip-address info-item">
         <h4>IP ADDRESS</h4>
         <p>${ipData}</p>
-      </div>
+      </div> 
       <div class = "ip-location info-item">
         <h4>LOCATION</h4>
         <p>${ipLocation}</p>
